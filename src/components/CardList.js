@@ -7,7 +7,7 @@ const CardList = ({ robots }) => {
           return <Card key={robot.id} {...robot}/>
         }) : '' }
       </div>
-      
+
     )
 };
 
