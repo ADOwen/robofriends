@@ -3,7 +3,7 @@
 A fun little React application in which you can search for robots.
 
 ## Live page
-Check out the live site [here](www.adowen.github.io/robofriends)!
+Check out the live site [here](https://adowen.github.io/robofriends)
 
 ## Photo
 
