@@ -1,14 +1,16 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { Provider } from 'react-redux';
-import {createStore} from 'redux'
+import {applyMiddleware, createStore, combineReducers} from 'redux'
+import thunk from 'redux-thunk';
 import './index.css';
 import App from './containers/App';
 import reportWebVitals from './reportWebVitals';
 import 'tachyons'
-import { searchRobots } from './reducers';
+import { searchRobots, requestRobots } from './reducers';
 
-const store = createStore(searchRobots)
+const rootReducter = combineReducers({searchRobots, requestRobots})
+const store = createStore(rootReducter, applyMiddleware(thunk))
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
