@@ -5,6 +5,7 @@ import CardList from '../components/CardList'
 import SearchBox from '../components/SearchBox';
 import Scroll from '../components/Scroll'
 import ErrorBoundary from '../components/ErrorBoundary';
+import Header from '../components/Header';
 // styles
 import './App.css'
 
@@ -35,12 +36,12 @@ const App = (props) => {
   useEffect(()=>{
     onRequestRobots()
   },[])
-
+   console.log('app rerendered')
   return isPending ? 
     <h1 className='tc'> loading...</h1> :
     (
       <div className="App tc">
-        <h1 className='f1'>RoboFriends</h1>
+        <Header/>
         <SearchBox searchChange={onSearchChange}/>
         <Scroll>
           <ErrorBoundary>
